@@ -2,8 +2,6 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
-
-# Dataset
 data = {'Attendance': [95, 78, 88, 65, 92, 70, 85, 60],
     'Internal_Marks': [85, 72, 80, 60, 87, 68, 78, 55],
     'Aptitude_Score': [78, 65, 75, 55, 82, 60, 72, 50],
@@ -13,14 +11,11 @@ data = {'Attendance': [95, 78, 88, 65, 92, 70, 85, 60],
 
 df = pd.DataFrame(data)
 
-# Features and Target
 X = df[['Attendance', 'Internal_Marks', 'Aptitude_Score', 'Programming_Score']]
 y = df['Final_CGPA']
 
-# Split dataset
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train Linear Regression model
 model = LinearRegression()
 model.fit(X_train, y_train)
 
@@ -32,7 +27,6 @@ print("Actual CGPA:", y_test.values)
 print("Predicted CGPA:", y_pred)
 print("Mean Squared Error (MSE):", round(mse, 4))
 
-# Feature Importance (Coefficients)
 importance = pd.DataFrame({'Feature': X.columns,'Coefficient': model.coef_})
 
 print("\nFeature Importance:")
