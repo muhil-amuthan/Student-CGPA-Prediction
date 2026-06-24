@@ -2,12 +2,8 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
-data = {'Attendance': [95, 78, 88, 65, 92, 70, 85, 60],
-    'Internal_Marks': [85, 72, 80, 60, 87, 68, 78, 55],
-    'Aptitude_Score': [78, 65, 75, 55, 82, 60, 72, 50],
-    'Programming_Score': [82, 70, 79, 58, 85, 63, 75, 52],
-    'Final_CGPA': [8.9, 7.2, 8.4, 6.5, 9.1, 6.9, 8.0, 6.0]
-}
+data = {'Attendance': [95, 78, 88, 65, 92, 70, 85, 60],'Internal_Marks': [85, 72, 80, 60, 87, 68, 78, 55],
+        'Aptitude_Score': [78, 65, 75, 55, 82, 60, 72, 50],'Programming_Score': [82, 70, 79, 58, 85, 63, 75, 52],'Final_CGPA': [8.9, 7.2, 8.4, 6.5, 9.1, 6.9, 8.0, 6.0]}
 
 df = pd.DataFrame(data)
 
